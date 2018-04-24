@@ -10,5 +10,6 @@
     <color name="eduIdRed">#FF2D55</color>
     <color name="eduIdWhite">#FFFFFF</color>
     <color name="eduIdGreen">#32CD32</color>
+    <color name="eduIdBlue">#1F98D5</color>
 
 </resources>
