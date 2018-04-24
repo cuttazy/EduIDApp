@@ -16,8 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.LoginActivity"></activity>
-        <activity android:name=".view.HomeActivity">
-        </activity>
+        <activity android:name=".view.HomeActivity"></activity>
         <activity android:name=".view.SelectServiceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
