@@ -1,0 +1,60 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp"
+        android:textSize="20dp"
+        android:textColor="@color/eduIdWhite"
+        android:background="@color/eduIdRed"
+        android:text="My Services"
+        android:id="@+id/myServicesTitle"/>
+
+
+    <Button  android:id="@+id/acceptButton" android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/eduIdGreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:paddingBottom="20dp"
+        android:background="@android:color/transparent"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:text="Accept" />
+    <Button  android:id="@+id/rejectButton" android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/eduIdRed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40dp"
+        android:paddingBottom="20dp"
+        android:background="@android:color/transparent"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:text="Reject" />
+
+    <ListView android:id="@android:id/list"
+        android:layout_width="fill_parent" android:layout_above="@+id/acceptButton"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/myServicesTitle"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentTop="true"    android:drawSelectorOnTop="false" />
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+

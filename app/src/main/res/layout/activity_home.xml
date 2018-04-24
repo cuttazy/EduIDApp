@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp"
+        android:textSize="40dp"
+        android:textColor="@color/eduIdWhite"
+        android:background="@color/eduIdRed"
+        android:text="Hello"
+        android:id="@+id/textView3"
+        android:layout_gravity="center_horizontal" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="User Full Name"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="6dp"
+        android:id="@+id/userFullName"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/userEmailAddress"
+        android:layout_gravity="center_horizontal" />
+
+    <!--<Button-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Open List"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:id="@+id/openlistbutton"-->
+        <!--android:layout_marginTop="300dp"-->
+        <!--android:background="@color/eduIdRed"-->
+        <!--android:textColor="@color/eduIdWhite"/>-->
+
+    <!--<Button-->
+        <!--style="?android:attr/buttonStyleSmall"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Virtual 3rd"-->
+        <!--android:id="@+id/virtual3rdButton"-->
+        <!--android:layout_gravity="center_horizontal" />-->
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/logoutButton2"
+        android:layout_marginTop="250dp"
+        android:background="@color/eduIdRed"
+        android:textColor="@color/eduIdWhite"/>
+
+
+</LinearLayout>
