@@ -23,12 +23,12 @@ dependencies {
 
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
 
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:27.1.1'
-    compile 'io.jsonwebtoken:jjwt:0.6.0'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'io.jsonwebtoken:jjwt:0.6.0'
     //    compile 'com.auth0:java-jwt:3.2.0'
     //    compile 'com.auth0:jwks-rsa:0.1.0'
-    compile files('libs/nimbus-jose-jwt-5.1.jar')
-    compile files('libs/json-smart-1.0.6.3.jar')
+    implementation files('libs/nimbus-jose-jwt-5.1.jar')
+    implementation files('libs/json-smart-1.0.6.3.jar')
 }

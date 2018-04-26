@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                  splashImage.clearAnimation();
                  ActivitiesManager.startLoginActivity(MainActivity.this);
              }
-         }, 3000);
+         }, 2500);
 
 
         //ActivitiesManager.startLoginActivity(this);

@@ -1,66 +1,225 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
+    <!-- HEADER -->
     <LinearLayout
-        android:id="@+id/header"
+
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/header_gradient"
         android:orientation="vertical"
-        android:background="">
+        app:layout_constraintBottom_toTopOf="@id/guidelineHeader"
+
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/eduid_icon" />
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/eduid_icon"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/titleLogin"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
             android:text="Swiss EduID"
             android:textColor="@color/eduIdBlue"
-            android:textSize="24sp"
+            android:layout_marginBottom="15dp"
+
+            android:textSize="22sp"
             android:textStyle="bold" />
 
     </LinearLayout>
 
+    <!-- BODY -->
     <LinearLayout
-        android:id="@+id/body"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="0dp"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineButtonStart"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHeader"
+        android:gravity="top">
+
+        <!-- Username -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_weight="2"
+                android:gravity="bottom"
+                android:text="E-mail"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/emailEditText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="5"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:gravity="bottom"
+                android:inputType="textEmailAddress" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="5dp"
+            android:background="@color/eduIdGray"
+            android:id="@+id/inputBarEmail"/>
+
+        <!-- Password -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_weight="2"
+                android:gravity="bottom"
+                android:text="Password"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="4"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:gravity="bottom"
+                android:inputType="textPassword" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/ico_eye_hidden"
+                android:gravity="bottom"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:onClick="hideShowPass"
+                android:id="@+id/hideShowPassword"
+                />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="5dp"
+            android:background="@color/eduIdGray"
+            android:id="@+id/inputBarPass"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="@string/forgotPass"
+            android:textColor="@color/eduIdGray"
+            android:onClick="forgotPassword"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"/>
+
+<!-- empty image view for layouting -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@android:color/transparent"
+        android:layout_weight="6"/>
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/emailEditText"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:text="E-mail"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
 
-    <EditText
-        android:id="@+id/emailEditText"
+        app:layout_constraintStart_toEndOf= "@id/guidelineLeft"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+        app:layout_constraintTop_toBottomOf="@id/guidelineButtonStart"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineButtonEnd"
+
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/roundcorner_button_blue"
+        android:text="@string/loginButton"
+
+        android:textColor="@color/eduIdWhite"
+        />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="140dp"
-        android:ems="10"
-        android:inputType="textEmailAddress" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <android.support.constraint.Guideline
+    android:id="@+id/guidelineButtonStart"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.85" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineButtonEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
 
     <!--
         To test before remove totally -> if wrong, add it to emailEditText
@@ -68,36 +227,5 @@
         android:layout_toEndOf="@+id/textView"
         -->
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/passwordEditText"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:text="Password"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <EditText
-        android:id="@+id/passwordEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="190dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:password="true" />
-
-
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
-        android:background="@color/eduIdRed"
-        android:text="Login"
-        android:textColor="@color/eduIdWhite" />
-
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
