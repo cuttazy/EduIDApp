@@ -1,68 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:paddingBottom="6dp"
-        android:paddingTop="6dp"
-        android:textSize="40dp"
-        android:textColor="@color/eduIdWhite"
-        android:background="@color/eduIdRed"
-        android:text="Hello"
-        android:id="@+id/textView3"
-        android:layout_gravity="center_horizontal" />
+        android:layout_height="0dp"
+        android:background="@drawable/header_gradient"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHeader"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="bottom"
+        >
 
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="0dp"
+            android:paddingStart= "@dimen/activity_horizontal_margin"
+            android:text="Hallo"
 
+            android:textAppearance="@android:style/TextAppearance.Material.Small"
+            android:textColor="@android:color/black"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/userFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:text="User Full Name"
+            android:textAppearance="@android:style/TextAppearance.Material.Small"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+<!--
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="User Full Name"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="6dp"
-        android:id="@+id/userFullName"
-        android:layout_gravity="center_horizontal" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
         android:id="@+id/userEmailAddress"
-        android:layout_gravity="center_horizontal" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+
+        app:layout_constraintTop_toBottomOf="@id/guidelineHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+       /> -->
 
     <!--<Button-->
-        <!--android:layout_width="200dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="Open List"-->
-        <!--android:layout_gravity="center_horizontal"-->
-        <!--android:id="@+id/openlistbutton"-->
-        <!--android:layout_marginTop="300dp"-->
-        <!--android:background="@color/eduIdRed"-->
-        <!--android:textColor="@color/eduIdWhite"/>-->
+    <!--android:layout_width="200dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Open List"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:id="@+id/openlistbutton"-->
+    <!--android:layout_marginTop="300dp"-->
+    <!--android:background="@color/eduIdRed"-->
+    <!--android:textColor="@color/eduIdWhite"/>-->
 
     <!--<Button-->
-        <!--style="?android:attr/buttonStyleSmall"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="Virtual 3rd"-->
-        <!--android:id="@+id/virtual3rdButton"-->
-        <!--android:layout_gravity="center_horizontal" />-->
+    <!--style="?android:attr/buttonStyleSmall"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Virtual 3rd"-->
+    <!--android:id="@+id/virtual3rdButton"-->
+    <!--android:layout_gravity="center_horizontal" />-->
+
+    <ListView
+        style="@android:style/Widget.Material.ListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:divider="@color/eduIdGray"
+        android:dividerHeight="1dp"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHeader"
+        app:layout_constraintBottom_toTopOf="@id/guidelineButtonTop"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/userListView"
+        />
 
     <Button
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="Logout"
-        android:layout_gravity="center_horizontal"
         android:id="@+id/logoutButton2"
-        android:layout_marginTop="250dp"
-        android:background="@color/eduIdRed"
-        android:textColor="@color/eduIdWhite"/>
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/roundcorner_button_yellow"
+        android:text="Logout"
+        android:textColor="@color/eduIdWhite"
+
+        app:layout_constraintTop_toBottomOf="@id/guidelineButtonTop"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineButtonBottom"
+        app:layout_constraintStart_toEndOf="@id/guidelineLeft"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+        />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <android.support.constraint.Guideline
+    android:id="@+id/guidelineHeader"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.25" />
+
+    <android.support.constraint.Guideline
+    android:id="@+id/guidelineButtonTop"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.85" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineButtonBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
 
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -8,17 +8,17 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.MainActivity">
+        <activity android:name=".view.MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
                 <!--<data android:mimeType="text/plain"></data>-->
             </intent-filter>
         </activity>
-        <activity android:name=".view.LoginActivity"></activity>
-        <activity android:name=".view.HomeActivity">
-        </activity>
-        <activity android:name=".view.SelectServiceActivity">
+        <activity android:name=".view.LoginActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".view.HomeActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".view.SelectServiceActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />

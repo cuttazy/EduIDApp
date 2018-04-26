@@ -1,11 +1,16 @@
 <resources>
-    <string name="app_name">EduIdApp</string>
-    <string name="whitelistButtonText">whitelist</string>
-    <string name="authorizeAppTitle">Authorize Application</string>
-    <string name="errorOnReadJSON">Error on read json response.</string>
-    <string name="loginError">ERROR: incorrect username or password</string>
-    <string name="saveLoginDataError">Error on saving login data. Please try again.</string>
-    <string name="notLoggedErrorMessage">User not logged, please first login</string>
+    <string name="app_name">SWITCH EduID</string>
     <string name="appNotAuthorizedMessage">Application authorization declined by the user.</string>
+    <string name="authorizeAppTitle">Authorize Application</string>
+
+    <string name="errorOnReadJSON">Error on read json response.</string>
+    <string name="forgotPass">Forgot Password</string>
+    <string name="loginButton">Login</string>
+    <string name="loginError">ERROR: incorrect username or password</string>
+
+    <string name="notLoggedErrorMessage">User not logged, please first login</string>
+
     <string name="saveGrantTokenError">Error on save Grant Token. Please try again.</string>
+    <string name="saveLoginDataError">Error on saving login data. Please try again.</string>
+    <string name="whitelistButtonText">whitelist</string>
 </resources>

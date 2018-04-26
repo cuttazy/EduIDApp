@@ -1,53 +1,101 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    >
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHeader"
+        android:background="@drawable/header_gradient"
+        >
+
+
+    </LinearLayout>
 
 
     <TextView
+        android:id="@+id/myServicesTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:paddingBottom="6dp"
-        android:paddingTop="6dp"
-        android:textSize="20dp"
-        android:textColor="@color/eduIdWhite"
-        android:background="@color/eduIdRed"
-        android:text="My Services"
-        android:id="@+id/myServicesTitle"/>
+        android:text="EduID"
+        android:textColor="@android:color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHeader"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/activity_horizontal_margin" />
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:drawSelectorOnTop="false"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHeader"
+        app:layout_constraintBottom_toTopOf="@id/guidelineButton"
+        android:layout_marginTop="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/guidelineButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="35dp"
+        >
+
+        <Button
+            android:id="@+id/rejectButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/roundcorner_button_lightred"
+            android:text="Reject"
+            android:textAllCaps="false"
+            android:textColor="#deffffff"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/acceptButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/roundcorner_button_gray"
+            android:text="Accept"
+            android:textAllCaps="false"
+            android:textColor="@color/eduIdGray"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
 
-    <Button  android:id="@+id/acceptButton" android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:textColor="@color/eduIdGreen"
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:paddingBottom="20dp"
-        android:background="@android:color/transparent"
-        android:textAllCaps="false"
-        android:textStyle="bold"
-        android:text="Accept" />
-    <Button  android:id="@+id/rejectButton" android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:textColor="@color/eduIdRed"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="40dp"
-        android:paddingBottom="20dp"
-        android:background="@android:color/transparent"
-        android:textAllCaps="false"
-        android:textStyle="bold"
-        android:text="Reject" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
 
-    <ListView android:id="@android:id/list"
-        android:layout_width="fill_parent" android:layout_above="@+id/acceptButton"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/myServicesTitle"
-        android:layout_marginTop="50dp"
-        android:layout_alignParentTop="true"    android:drawSelectorOnTop="false" />
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
 
 
 
